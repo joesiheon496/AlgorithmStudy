@@ -21,8 +21,21 @@ class NodeMgmt:
       node.next = new
       new.prev = node
       self.tail = new
+      
   def desc(self):
     node = self.head
     while node:
       print(node.data)
       node = node.next
+      
+   def sear_from_head(self,data):
+    if self.head == None:
+      return False
+    
+    node = self.head
+    while node:
+      if node.data == data:
+        return node
+      else:
+        node = node.next
+    return False
