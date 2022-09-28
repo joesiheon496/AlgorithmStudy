@@ -24,3 +24,21 @@ class NodeMerge:
         while node:
             print(node.data)
             node = node.next
+
+    def delete(self,data):
+        if self.head = '':
+            print("해당 값을 가진 노드가 없음")
+            return
+        if self.head == data:
+            temp = self.head
+            self.head = self.head.next
+            del temp
+        else:
+            node = self.head
+            while node.next:
+                if node.next.data == data:
+                    temp = node.next
+                    node.next = node.next.next
+                    del temp
+                else:
+                    node = node.next
